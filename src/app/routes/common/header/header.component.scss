@@ -1,0 +1,101 @@
+
+
+@media (min-width: 1200px) {
+    .header {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        width: 970px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        width:  750px;
+    }
+}
+
+
+.header {
+    top: 0px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px 15px;
+    text-decoration: none;
+    height: 70px;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.8);
+
+    > span.title {
+        display: inline-block;
+        font-size: 24px;
+        height: 70px;
+        line-height: 70px;
+        margin-right: 30px;
+        position: relative;
+        width: 120px;
+        text-align: center;
+        color: #ED6A5A;
+    }
+
+    .nav {
+        list-style: none;
+        display: block;
+        height: 70px;
+        line-height: 70px;
+        position: relative;
+        padding: 0px;
+        text-align: center;
+        margin: 0;
+        float: right;
+
+        > .nav-item {
+            display: inline-block;
+            border-radius: 2px;
+            cursor: pointer;
+            position: relative;
+            a {
+                padding: 0px 30px;
+                height: 70px;
+                text-decoration: none;
+                color: #9BC1BC;
+                display: block;
+            }
+            a:hover {
+                color: #ED6A5A;
+            }
+        
+            a.active {
+                color: #ED6A5A !important;
+            }
+        }
+    }
+    
+}
+
+
+.bottom-spread-in-out:after {
+    content:'';
+    position:absolute;
+    border-bottom: 3px solid #ED6A5A;
+    left:51%;
+    right:51%;
+    bottom:0px;
+    transition-property:all;
+    transition-timing-function:cubic-bezier(0, 0.98, 0.51, 0.93);
+    transition-duration:200ms;
+    transition-delay:0s
+}
+.bottom-spread-in-out:hover:after {
+    left:0%;
+    right:0%
+}
+.bottom-spread-in-out:not(:hover):after {
+    transition-delay:0s
+}

@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div id="search">
+    <div class="search">
+        <input class="search-input" placeholder="请输入文章名称或标签" />
+        <span class="search-btn btn"><i class="fa fa-search" aria-hidden="true"></i></span>
+    </div>
+    <ul class="reversal">
+        <li class="item" *ngFor="let item of reversal; let i = index;" (click)="showEffect(item.id)">
+            <img src="assets/images/search/reversal/{{i+1}}.png">
+            <div class="cover">
+                {{ item.content}}
+            </div>
+        </li>
+    </ul>
+</div>
+<app-return-top></app-return-top>
+<app-footer></app-footer>

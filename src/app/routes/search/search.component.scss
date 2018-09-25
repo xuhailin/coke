@@ -1,0 +1,90 @@
+#search {
+    position: relative;
+    width: 600px;
+    margin: 5px auto;
+    text-align: center;
+
+    .search {
+        &-input {
+            width: 540px;
+            padding-right: 30px;
+            margin-left: 20px;
+            border: 1px solid #9BC1BC;
+            line-height: 35;
+            height: 35px;
+            text-indent: 10px;
+            border-radius: 3px;
+            font: inherit;
+            &:hover,
+            &:focus {
+                border: 1px solid #5CA4A9;
+                outline: none;
+            }
+        }
+        &-btn {
+            position: relative;
+            right: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            color: #9BC1BC;
+            text-align: center;
+            &:hover {
+                color: #ED6A5A !important;
+            }
+        }
+    }
+
+
+    .reversal{
+        list-style: none;
+        width: 600px;
+        text-align: center;
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+
+        .item {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            
+            img {
+                position: relative;
+                width: 150px;
+                height: 150px;
+                background-repeat: no-repeat;
+                border: 1px solid #fff;
+                border-radius: 2px;
+            }
+            .cover {
+                height: 150px;
+                width: 150px;
+                line-height: 150px;
+                font-size: 21px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                text-align: center;
+                transition: all 0.35s;
+                -webkit-transition: all 0.35s;
+                -moz-transition: all 0.35s;
+                display: none;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                color: #E6EBE0;
+                background-color: rgba(237, 106, 90, 0.9);
+                &.hover {
+                    transform: rotate(0deg) !important;
+                }
+            }
+        }
+
+    }
+}
+
