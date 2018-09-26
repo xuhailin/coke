@@ -18,7 +18,6 @@ export class SearchComponent implements OnInit {
 
   }
   showEffect(id) {
-    debugger;
     if (id) {
       this.router.navigate(['/search', id]);
     }

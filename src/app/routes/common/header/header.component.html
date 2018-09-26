@@ -4,10 +4,10 @@
   </span>
   <ul class="nav tab">
     <li class="nav-item" *ngFor="let item of navDatas" >
-      <a  class="bottom-spread-in-out" (click)="moveBottomLine($event)"  routerLink="{{item.link}}" routerLinkActive="active">
+      <a  class="bottom-spread-in-out" routerLink="{{item.link}}" routerLinkActive="active">
         {{item.name}}
       </a>
     </li>
-    <span #bottomLine class="nav-item-bottom"></span>
+    <span class="nav-item-bottom"></span>
   </ul>
 </div>

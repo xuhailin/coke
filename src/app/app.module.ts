@@ -12,7 +12,7 @@ import { RoutesModule } from './routes/routes.module';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    RoutesModule
+    RoutesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

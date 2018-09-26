@@ -13,7 +13,6 @@ const datas = [
 })
 export class HeaderComponent implements OnInit {
   navDatas =  datas;
-  @ViewChild('bottomLine') bottomLineRef: ElementRef;
 
   constructor() { 
   }
@@ -21,11 +20,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  moveBottomLine($event: MouseEvent) {
-     const target: any = $event.target;
-     const width = target.parentNode.offsetWidth;
-     const left = target.parentNode.offsetLeft;
-     this.bottomLineRef.nativeElement.style.left = left + "px";
-     this.bottomLineRef.nativeElement.style.width = width + "px";
-  }
 }

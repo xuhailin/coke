@@ -1,6 +1,11 @@
+
+<app-header [@showNav]="showNavState" style="display: block;"></app-header>
+<div id="showNav" (click)="showNav()">
+    <fa-icon [icon]="showNavIcon"></fa-icon>
+</div>
 <div id="showCss">
     <div class="showEffectNav">
-        <span class="levels" onclick="showEffect('showSearch')">查询界面</span>
+        <span class="levels" (click)="goBack()">查询界面</span>
         <span class="text">/Css效果展示界面</span>
     </div>
     <div class="separate"><span> 背景与边框 </span></div>
@@ -369,7 +374,7 @@
                         <!-- added via javascript -->
                         <ul class="squares">
                             <!-- added via javascript -->
-                            <li *ngFor="let i of range" attr.data-level="{{ Math.floor(Math.random() * 3)}}"></li>
+                            <li *ngFor="let i of range" attr.data-level="{{ i }}"></li>
                         </ul>
                     </div>
                 </div>
@@ -378,4 +383,5 @@
         </li>
     </ul>
 </div>
+
 <app-return-top></app-return-top>

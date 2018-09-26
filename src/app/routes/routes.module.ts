@@ -8,6 +8,7 @@ import { ReturnTopComponent } from './common/return-top/return-top.component';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { ShowCssComponent } from './search/show-css/show-css.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -21,7 +22,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: true}),
+    FontAwesomeModule
   ],
   declarations: [
     HomeComponent,
