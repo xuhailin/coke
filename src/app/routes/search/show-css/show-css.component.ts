@@ -51,4 +51,8 @@ export class ShowCssComponent implements OnInit {
       this.showNavIcon = faAngleDoubleUp;
     }
   }
+
+  viewTopicById(id: string) {
+    this.router.navigate(['/topic', id]);
+  }
 }

@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search/search.component';
 import { ShowCssComponent } from './search/show-css/show-css.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TopicComponent } from './topic/topic.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent},
   { path: 'search/show-css', component: ShowCssComponent},
   { path: 'about', component: AboutComponent},
+  { path: 'topic/:id', component: TopicComponent}, 
   { path: '**', component: HomeComponent }
 ];
 
@@ -23,7 +26,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes, {useHash: true}),
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   declarations: [
     HomeComponent,
@@ -33,6 +37,7 @@ const routes: Routes = [
     ReturnTopComponent,
     AboutComponent,
     ShowCssComponent,
+    TopicComponent,
   ],
   exports: [ RouterModule ]
 })
